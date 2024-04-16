@@ -153,21 +153,21 @@ def question7():
     answers['(i) Best classifier?'] = 'C2'
 
     # type: explain_string
-    answers['(i) Best classifier, explain'] = ''
+    answers['(i) Best classifier, explain'] = "C2 is a superior classifier to C1 because it achieves a much higher recall/TPR and F1-measure, showing that it not only identifies more positive cases accurately but also better manages the balance between precision and recall."
 
     # type: string
     # choices: ['TPR-FPR', 'precision-recall-F1-Measure']
-    answers['(ii) appropriate metric pair'] = None
+    answers['(ii) appropriate metric pair'] = "precision-recall-F1-Measure"
 
     # type: explain_string
-    answers['(ii) appropriate metric pair, explain'] = None
+    answers['(ii) appropriate metric pair, explain'] = "For imbalanced datasets with fewer positive cases, precision, recall, and F1-measure are indispensable metrics, as they deliver a holistic view of the classifier’s performance and capabilities"
 
     # type: string
     # choices: ['C1', 'C2', 'C3']
-    answers['(iii) preferred classifier?'] = None
+    answers['(iii) preferred classifier?'] = "C2"
 
     # type: explain_string
-    answers['(iii) best classifier, explain'] = None
+    answers['(iii) best classifier, explain'] = "C2 is more desirable because it strikes the best balance between precision and recall, as shown by its highest F1-measure. C3, although it leads in precision, lacks in recall, which is a disadvantage in applications where finding all positive cases is pivotal"
     return answers
 
 
