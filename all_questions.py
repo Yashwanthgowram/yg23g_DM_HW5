@@ -99,15 +99,15 @@ def question5():
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(b)'] = "i"
+    answers['(b)'] = 'i'
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(c)'] = "ii"
+    answers['(c)'] = 'ii'
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(d)'] = "iv"
+    answers['(d)'] = 'iv'
     return answers
 
 
@@ -140,7 +140,7 @@ def question6():
     answers['(c) Which metric?'] = 'precision/recall'
 
     # type: explain_string
-    answers['(c) explain'] = 'In this particular scenario, precision and recall are the key metrics, assessing the balance of true positive predictions (precision) and the model's effectiveness in identifying all positives (recall). As C2 has a higher recall than C1, it could arguably be considered a better classifier when using these metrics'
+    answers['(c) explain'] = "In this particular scenario, precision and recall are the key metrics, assessing the balance of true positive predictions (precision) and the model's effectiveness in identifying all positives (recall). As C2 has a higher recall than C1, it could arguably be considered a better classifier when using these metrics"
     return answers
 
 
@@ -150,10 +150,10 @@ def question7():
 
     # type: string
     # choices: ['C1', 'C2', 'None']
-    answers['(i) Best classifier?'] = None
+    answers['(i) Best classifier?'] = 'C2'
 
     # type: explain_string
-    answers['(i) Best classifier, explain'] = None
+    answers['(i) Best classifier, explain'] = ''
 
     # type: string
     # choices: ['TPR-FPR', 'precision-recall-F1-Measure']
