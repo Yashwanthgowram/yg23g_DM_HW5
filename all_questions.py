@@ -176,23 +176,23 @@ def question8():
     answers = {}
 
     # type: eval_float
-    answers['(a) precision for C0'] = None
+    answers['(a) precision for C0'] = "p"
 
     # type: eval_float
-    answers['(a) recall for C0'] = None
+    answers['(a) recall for C0'] = "p"
 
     # type: eval_float
-    answers['(b) F-measure of C0'] = None
+    answers['(b) F-measure of C0'] = "2 * (0.1 * p) / (0.1 + p)"
 
     # type: string
     # choices: ['yes', 'no', 'unknown']
-    answers['C1 better than random?'] = None
+    answers['C1 better than random?'] = "yes"
 
     # type: float
     # What is the range of p for which C1 is better than random?  What is
     # "?" in the expression "p > ?"
 
-    answers['p-range'] = None
+    answers['p-range'] = 0.3
     return answers
 
 
@@ -202,18 +202,23 @@ def question9():
 
     # type: dict[string,float]
     # keys: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) metrics'] = None
+    answers['(i) metrics'] = {
+    'recall': 0.5333,
+    'precision': 0.6154,
+    'F-measure': 0.5714,
+    'accuracy': 0.88
+}
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) best metric?'] = None
+    answers['(i) best metric?'] = 'F-measure'
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) worst metric?'] = None
+    answers['(i) worst metric?'] = 'accuracy'
 
     # type: explain_string
-    answers['(ii) Explain your choices of best and worst metrics'] = None
+    answers['(ii) Explain your choices of best and worst metrics'] = "The F-measure is the ideal metric in cases like this, where precision and recall need to be balanced, particularly in imbalanced class scenarios such as predicting weather outcomes, where one type might dominate. Accuracy is the least useful metric because it can be high due to a large number of true negatives and does not truly indicate the model’s effectiveness in predicting minority class outcomes"
     return answers
 
 
@@ -223,21 +228,21 @@ def question10():
 
     # type: string
     # choices: ['T1', 'T2']
-    answers['(a) better test based on F-measure?'] = None
+    answers['(a) better test based on F-measure?'] = 'T1'
 
     # type: string
     # choices: ['T1', 'T2']
-    answers['(b) better test based on TPR/FPR?'] = None
+    answers['(b) better test based on TPR/FPR?'] = 'T2'
 
     # type: string
     # choices: ['F1', 'TPR/FPR']
-    answers['(c) Which evaluation measure to use between the two tests?'] = None
+    answers['(c) Which evaluation measure to use between the two tests?'] = 'TPR/FPR'
 
     # type: explain_string
-    answers['(c) Which evaluation measure? Explain'] = None
+    answers['(c) Which evaluation measure? Explain'] = "When the substantial risks associated with missing a diagnosis (false negatives) outweigh those related to false positives, TPR/FPR stands out as the most effective measure for evaluating cancer tests T1 and T2. It highlights the tests' proficiency in correctly spotting genuine positives"
 
     # type: explain_string
-    answers['(d) Example scenario where you would reverse choise in (c)'] = None
+    answers['(d) Example scenario where you would reverse choise in (c)'] = "If there is a low probability of cancer in the population being tested, the F-measure becomes more critical than TPR/FPR. False positives can lead to psychological discomfort, dangerous follow-up tests, and increased treatment costs. The F-measure, which accounts for both true and false positives, should be prioritized to enhance precision and reduce these negative effects, particularly when subsequent procedures following a positive result are expensive and hazardous."
     return answers
 #-----------------------------------------------------------
 if __name__ == '__main__':
